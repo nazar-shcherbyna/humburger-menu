@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.body {
+    transition: all 1s ease;
+}
+
+a, button {
+    transition: all .3s ease-in-out;
+}
+
+html {
+    font-size: 10px;
+    /* scroll-behavior: smooth; */
+}
+
+.container {
+    width: 80%;
+    min-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.humburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.humburger:focus {
+    outline: none;
+}
+
+.humburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.humburger span::before, 
+.humburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    content: '';
+}
+
+.humburger span::before {
+    top: -20px;
+}
+
+.humburger span::after {
+    bottom: -20px;
+}
+
+.humburger-line{
+    background-color: rgb(238, 137, 137);
+}
+
+.humburger-line span{
+    transition: background 0s .3s;
+}
+
+.humburger-line span::before, 
+.humburger-line span::after {
+    transition-duration: .3s, .3s;
+    transition-delay: .3s, 0s;
+}
+
+.humburger-line span::before {
+    transition-property: top, transform;
+}
+
+.humburger-line span::after {
+    transition-property: bottom, transform;
+}
+
+.humburger-line.is-active {
+    background: rgb(136, 255, 0);
+}
+
+.humburger-line.is-active span {
+    background: none;
+}
+
+.humburger-line.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.humburger-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.humburger-line.is-active span::before, 
+.humburger-line.is-active span::after {
+    transition-delay: 0s, .3s;
+}
+
+#menu {
+    width: 300px;
+    margin-left: -204px;
+    background: rgb(60, 100, 211);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 1s ease;
+    z-index: 50;
+}
+
+.body-active {
+    margin-left: 300px;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}
