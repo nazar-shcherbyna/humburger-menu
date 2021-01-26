@@ -13,12 +13,10 @@ a, button {
 
 html {
     font-size: 10px;
-    /* scroll-behavior: smooth; */
 }
 
 .container {
     width: 80%;
-    min-width: 1000px;
     margin: 30px auto;
     text-align: center;
 }
@@ -76,10 +74,6 @@ html {
 
 .humburger-line{
     background-color: rgb(238, 137, 137);
-}
-
-.humburger-line span{
-    transition: background 0s .3s;
 }
 
 .humburger-line span::before, 
