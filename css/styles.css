@@ -50,18 +50,20 @@ html {
     left: 18px;
     right: 18px;
     height: 8px;
+    border-radius: 5px;
     background-color: #fff;
 }
 
 .humburger span::before, 
 .humburger span::after {
+    content: '';
     position: absolute;
     display: block;
     left: 0;
     width: 100%;
     height: 8px;
+    border-radius: 5px;
     background: #fff;
-    content: '';
 }
 
 .humburger span::before {
